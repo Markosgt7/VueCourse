@@ -2,6 +2,7 @@ Vue.component('vue-directives', {
     //son las etiquetas html para mostrar los achivos
     template: `
                 <div>
+                <DirectiveOn/>
                 <h1 v-text="title"></h1>
                 <strong><p v-text="text"></p></strong>
                 <em><p> {{ otherText }}</p></em>
@@ -10,6 +11,7 @@ Vue.component('vue-directives', {
                 <DirectiveShow/>
                 <DirectiveIf/>
                 <DirectiveFor/>
+                
                 </div>`,
     data() {
         return {//son los datos que retorna para mostrar en la view 
@@ -28,6 +30,7 @@ Vue.component('vue-directives', {
         DirectiveShow,// component hijo para mostrar info reactiva
         DirectiveIf,
         DirectiveFor,
+        DirectiveOn,
 
 
     }
