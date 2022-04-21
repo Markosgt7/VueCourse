@@ -8,6 +8,8 @@ Vue.component('vue-directives', {
                 <em><p> {{ otherText }}</p></em>
                 <a :href="link.href" :title="link.title" v-text="link.text"></a>
                 <DirectiveHtml/>
+                <DirectiveShow/>
+                <DirectiveIf/>
                 </div>`,
     data() {
         return {//son los datos que retorna para mostrar en la view 
@@ -22,7 +24,9 @@ Vue.component('vue-directives', {
         }
     },
     components: {//se usa para agregar un component hijo dentro de uno padre
-        DirectiveHtml,
+        DirectiveHtml,//component hijo para mostrar etiqueta html
+        DirectiveShow,// component hijo para mostrar info reactiva
+        DirectiveIf,// component hijo usando if para mas seguridad
 
     }
 })
